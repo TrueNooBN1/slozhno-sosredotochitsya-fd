@@ -10,6 +10,7 @@
   --title-text_background-color: var(--accent-color);
   --title-text_color:#000028;
   --content-padding: 10px;/*desktop and pad 20px*/
+  --main-content-padding: 20px;
   --main-font-size: 18px;
   --bg-color: #000028;
   --cover-image: url(/images/cover-image-dark.png);
