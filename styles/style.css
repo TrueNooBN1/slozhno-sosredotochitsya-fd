@@ -117,7 +117,7 @@
   content: "";
   position: absolute;
   top: 5px;
-  left: 35px;;
+  left: 35px;
   width: 0.75em;
   height: 0.75em;
   border-radius: 100%;
@@ -170,7 +170,7 @@
 }
 
 .main__text {
-  color: var(--main__text-color); 
+  color: var(--main__text-color);
   font-size: var(--main-font-size);
   line-height: 23.4px;
 }
@@ -294,7 +294,7 @@
   }
 
   .gallery {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
   }
 
@@ -373,7 +373,7 @@
   .footer .title {
     width: 50%;
     height: 32%;
-  }  
+  }
 }
 
 @media (width >= 1024px) {
@@ -424,10 +424,10 @@
 
   .footer .title {
     height: 35%;
-  }  
+  }
 }
 @media (prefers-color-scheme: light) {
-  :root.theme-auto {
+  :root {
     /* сохраните этот селектор в приведённом виде.
       Так стили написанные ниже будут иметь больший вес,
       чем стили в медиазапросе предпочтений пользователя
@@ -444,6 +444,7 @@
   
   }
   
-  .theme-auto .decorated-zone_tag{
+  .theme-auto .decorated-zone_tag {
     display: none;
-  }}
+  }
+}
