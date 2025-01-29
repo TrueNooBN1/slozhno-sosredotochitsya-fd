@@ -9,8 +9,18 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #FF0070;
+  --header-accent-color: var(--accent-color);
+  --button-hover-color: rgba(255, 0, 112, 0.4);
+  --title-color: #DB00FF;
+  --title-text_background-color: var(--accent-color);
+  --title-text_color:#000028;
+  --bg-color: #000028;
+  --cover-image: url(../images/cover-image-dark.png);
+  --main__text-color: #F1B2CE;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .decorated-zone_tag {
+  display: block;
 }
+

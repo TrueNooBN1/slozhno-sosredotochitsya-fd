@@ -16,9 +16,8 @@
   --title-text_background-color: #FF8DCB;
   --title-text_color:#353430;
   --bg-color: #FFF1F7;
-  --cover-image: url(/images/cover-image-light.png);
+  --cover-image: url(../images/cover-image-light.png);
   --main__text-color: #353430;
-
 }
 
 .theme-light .decorated-zone_tag {

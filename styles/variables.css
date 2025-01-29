@@ -15,7 +15,7 @@
   --main-content-padding: 20px;
   --main-font-size: 18px;
   --bg-color: #000028;
-  --cover-image: url(/images/cover-image-dark.png);
+  --cover-image: url(../images/cover-image-dark.png);
   --line-height: 23.4px;
   --main__text-color: #F1B2CE;
 }
