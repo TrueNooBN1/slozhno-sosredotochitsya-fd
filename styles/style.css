@@ -135,11 +135,11 @@
 }
 
 .title_decor {
-  background-color: var(--title-text_background-color);
+  background-color: var(--title-text-background-color);
 }
 
 .title_text {
-  color: var(--title-text_color);
+  color: var(--title-text-color);
   font-weight: var(--bold-font);
   font-size: var(--main-font-size);
   line-height: 23.4px;
@@ -160,13 +160,13 @@
 }
 
 .main__title {
-  color: var(--accent-color);
+  color: var(--main-title-text-color);
   font-size: var(--main-font-size);
   line-height: 23.4px;
 }
 
 .main__text {
-  color: var(--main__text-color);
+  color: var(--main-text-color);
   font-size: var(--main-font-size);
   line-height: 23.4px;
 }
@@ -183,12 +183,11 @@
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--main-text-color);
 }
 
 .link:focus-visible {
-  outline: 1px solid var(--main__text-color);
-  text-decoration: underline;
+  outline: 1px solid var(--main-text-color);
 }
 
 .content_section {
@@ -241,17 +240,16 @@
   text-align: center;
   inline-size: 100%;
   block-size: 100vh;
+}
 
+.footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width >= 768px) {
-  :root {
-    --content-padding: 20px;
-    --main-content-padding: 40px;
-  }
 
   .main {
-    gap: 80px;
+    gap: 60px;
     margin-top: 30px;
     margin-bottom: 60px;
   }
@@ -317,54 +315,63 @@
     grid-row: 3/4;
   }
 
-  .content_section:nth-child(1) {
+  .why_section {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
     margin-top: 10px;
+    margin-bottom: var(--content-padding);
   }
 
-  .content_section:nth-child(1) .card {
+  .why_section .card {
     grid-column: 2;
   }
 
-  .content_section:nth-child(1) .main__title {
+  .why_section .main__title {
     grid-column: 1;
     grid-row: 1/2;
   }
 
-  .content_section:nth-child(2) {
+  .what_section {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
   }
 
-  .content_section:nth-child(2) .card {
+  .what_section .card {
     grid-column: 1/-1;
   }
 
-  .content_section:nth-child(3) {
-    grid-template-columns: repeat(3, 1fr);
+  .what_section .content_subsection {
+    grid-column: span 4;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
   }
 
-  .content_section:nth-child(3) .title_text {
+  .tips_section {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: var(--content-padding);
+  }
+
+  .tips_section .title_text {
     grid-column: -1/2;
   }
 
-  .content_section:nth-child(3) .card {
+  .tips_section .card {
     grid-column: -1/3;
   }
-  .content_section:nth-child(3) .content_subsection {
+  .tips_section .content_subsection {
     grid-column: -1/2;
     padding-left: 5px;
   }
 
-  .content_section:nth-child(3) .main__title {
+  .tips_section .main__title {
     grid-column: 1;
   }
 
   .footer .title {
-    width: 50%;
-    height: 32%;
+    inline-size: 50%;
+    padding-top: 0;
   }
 }
 
@@ -402,36 +409,34 @@
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+ 
+  .why_section {
+    margin-bottom: 0;
+  }
 
-  .content_section:nth-child(2) {
+  .what_section {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 1fr;
+    grid-auto-rows: 1fr;
     grid-auto-flow: row;
   }
-
-  .content_section:nth-child(2) .card {
-    grid-column: span 1;
-    grid-row: 2;
+  .what_section .content_subsection {
+    grid-column: span 3;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  .footer .title {
-    height: 35%;
+  .what_section .card {
+    /* (100% - 2 padding)/3 */
+    max-inline-size: calc((100% - 2 * (var(--content-padding)))/3);
+  }
+
+  .tips_section {
+    margin-bottom: 0;
   }
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    --accent-color: #FF8DCB;
-    --header-accent-color: #353430;
-    --button-hover-color: rgba(53, 52, 48, 0.4);
-    --title-color: #FFC2E6;
-    --title-text_background-color: #FF8DCB;
-    --title-text_color:#353430;
-    --bg-color: #FFF1F7;
-    --cover-image: url(../images/cover-image-light.png);
-    --main__text-color: #353430;
-  
-  }
-  
+
+@media (prefers-color-scheme: light) { 
   .theme-auto .decorated-zone_tag {
     display: none;
   }

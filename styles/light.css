@@ -13,13 +13,30 @@
   --header-accent-color: #353430;
   --button-hover-color: rgba(53, 52, 48, 0.4);
   --title-color: #FFC2E6;
-  --title-text_background-color: #FF8DCB;
-  --title-text_color:#353430;
+  --title-text-background-color: #FF8DCB;
+  --title-text-color:#353430;
   --bg-color: #FFF1F7;
   --cover-image: url(../images/cover-image-light.png);
-  --main__text-color: #353430;
+  --main-text-color: #353430;
+  --main-title-text-color: var(--main-text-color);
+
 }
 
 .theme-light .decorated-zone_tag {
   display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #FF8DCB;
+    --header-accent-color: #353430;
+    --button-hover-color: rgba(53, 52, 48, 0.4);
+    --title-color: #FFC2E6;
+    --title-text-background-color: #FF8DCB;
+    --title-text-color:#353430;
+    --bg-color: #FFF1F7;
+    --cover-image: url(../images/cover-image-light.png);
+    --main-text-color: #353430;
+    --main-title-text-color: var(--main-text-color);
+  }
 }
