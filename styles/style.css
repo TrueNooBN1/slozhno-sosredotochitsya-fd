@@ -27,8 +27,7 @@
   background-position: center;
   background-size: cover;
   inline-size: 100%;
-  block-size: 100vh;
-  min-block-size: 668px;
+  min-block-size: max(668px, 100vh);
 }
 
 .decorated-zone::before {
@@ -110,7 +109,7 @@
   color: var(--accent-color);
   line-height: 25px;
   block-size: var(--block-size);
-  inline-size: 2 * var(--block-size);
+  inline-size: calc(2 * var(--block-size));
 }
 
 .decorated-zone_tag::after {
@@ -240,8 +239,7 @@
   padding: var(--content-padding);
   text-align: center;
   inline-size: 100%;
-  block-size: 100vh;
-  min-block-size: 668px;
+  min-block-size: max(668px, 100vh);
 }
 
 .footer__title {
