@@ -109,7 +109,7 @@
   color: var(--accent-color);
   line-height: 25px;
   block-size: var(--block-size);
-  inline-size: calc(2 * var(--block-size));
+  inline-size: 2 * var(--block-size);
 }
 
 .decorated-zone_tag::after {
