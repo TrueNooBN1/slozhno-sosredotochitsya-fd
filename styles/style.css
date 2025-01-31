@@ -101,22 +101,22 @@
 }
 
 .decorated-zone_tag {
-  --block-size: 26px;
   position: absolute;
   top: var(--content-padding);
-  right: calc(var(--content-padding) + var(--block-size));
+  right: calc(var(--content-padding) + 9px);
   display: block;
   color: var(--accent-color);
   line-height: 25px;
-  block-size: var(--block-size);
-  inline-size: 2 * var(--block-size);
+  block-size: 26px;
+  inline-size: 52px;
+  line-height: 30px;
 }
 
 .decorated-zone_tag::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 35px;
+  top: 8px;
+  left: 41px;
   width: 0.75em;
   height: 0.75em;
   border-radius: 100%;
