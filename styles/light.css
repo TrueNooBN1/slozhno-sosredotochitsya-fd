@@ -39,4 +39,8 @@
     --main-text-color: #353430;
     --main-title-text-color: var(--main-text-color);
   }
+
+  .theme-auto .decorated-zone_tag {
+    display: none;
+  }
 }
