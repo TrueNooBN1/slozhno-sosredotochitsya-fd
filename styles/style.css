@@ -106,7 +106,6 @@
   right: calc(var(--content-padding) + 9px);
   display: block;
   color: var(--accent-color);
-  line-height: 25px;
   block-size: 26px;
   inline-size: 52px;
   line-height: 30px;
